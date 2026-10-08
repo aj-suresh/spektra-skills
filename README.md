@@ -1,6 +1,6 @@
-# Claude Skills
+# Spektra Skills
 
-Personal Claude Code skills, kept here so they follow me across machines (not synced automatically by Claude Code).
+Claude Code skills that are only relevant to CloudLabs.ai or Spektra Systems, kept here so they follow me across machines (not synced automatically by Claude Code).
 
 ## What's here
 
