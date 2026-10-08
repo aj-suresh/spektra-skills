@@ -20,7 +20,7 @@ The two cloudlabs skills are manual-invoke only (`disable-model-invocation: true
 
 ## Install via plugin marketplace (recommended for the team)
 
-Prerequisite: access to this private repo, with GitHub login stored on your machine (`gh auth login`, then `gh auth setup-git`, or an SSH key).
+This repo is public, so no GitHub login or access request is needed.
 
 ```bash
 claude plugin marketplace add aj-suresh/spektra-skills
