@@ -1,0 +1,9 @@
+{
+  "*": {
+    "exclude": ["^/(?:careers|jobs|about-us)/?$"]
+  },
+  "example.com": {
+    "money": ["^/(?:platform|solutions|pricing|integrations|demo)(?:/|$)"],
+    "exclude": ["^/(?:webinar-2024-archive)/?$"]
+  }
+}

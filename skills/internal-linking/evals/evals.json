@@ -1,0 +1,29 @@
+{
+  "skill_name": "internal-linking",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Add internal links to my blog draft als-migration-checklist.docx. It's going on cloudlabs.ai, target keyword is 'azure lab services migration'. Use the default sites, and just go with defaults on everything else.",
+      "expected_output": "Linked .docx copy with ~3-5 well-anchored outbound links (one hub/alternative page for the ALS concept, LMS integration page, pricing or POC page), a report with GSC-informed cannibalization flag for existing ALS pages, and 3-6 inbound suggestions with exact sentences.",
+      "files": [
+        "drafts/als-migration-checklist.docx"
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "here's a draft for the cloudlabs blog: isv-poc-playbook.docx. can you add internal links and tell me which existing posts should link to it? planned url is https://cloudlabs.ai/blog/isv-hands-on-poc-playbook. max 6 links pls, and it must link the self-service trials page. ok to link saasify for the marketplace bit.",
+      "expected_output": "<=6 outbound links including /solutions/isv/self-service-trials, one SISTER link to saasify marketplace/private offer page in the marketplace section, POC solution page; inbound list pointing at the planned URL.",
+      "files": [
+        "drafts/isv-poc-playbook.docx"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Prep nce-billing-margins.docx for publishing on cspcontrolcenter.com - internal links please. Only use cspcontrolcenter.com and saasify.ai this time, drop the other sites.",
+      "expected_output": "Home site = cspcontrolcenter.com; links only to cspcontrolcenter.com (and saasify only if truly relevant, likely none); billing automation / integrations (QuickBooks, Xero) / indirect resellers / direct partners pages; no cloudlabs links; inbound suggestions from CSP blog posts.",
+      "files": [
+        "drafts/nce-billing-margins.docx"
+      ]
+    }
+  ]
+}

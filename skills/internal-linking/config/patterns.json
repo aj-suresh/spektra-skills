@@ -1,0 +1,21 @@
+{
+  "*": {
+    "exclude": ["^/(?:about-us|life-at-spektra|careers|wall-of-love)/?$"]
+  },
+  "cloudlabs.ai": {
+    "money": [
+      "^/(?:platform|solutions|pricing|demo|[^/]+-alternative)(?:/|$)",
+      "^/(?:virtual-labs|cloud-sandbox|pre-built-labs|custom-labs|cloudlabs-vm-labs|azure-lab-services|azure-labs-migration-hub|multi-cloud-labs|skills-validation|cloudlabs-for-education|cloudlabs-for-continuing-education|edtech-labs|e-learning-platform|development-labs|hackathon|employee-training|employee-enablement|customer-enablement|enterprises-hands-on-lab|ms-learning-partner|microsoft|cloud-distributors|cloud-certifications|seed-labs|check-point-labs|databricks-labs-training-and-enablement|isv-immersion-workshop|compare-virtual-lab-platforms|free-trial)/?$"
+    ],
+    "exclude": ["^/(?:educause-\\d{4}|herovariant\\d*|animated-cards-demo|ask-ai|cloudlabs-trainers-program|testimonials)/?$"]
+  },
+  "cspcontrolcenter.com": {
+    "money": [
+      "^/(?:features|integrations|solutions|pricing|demo)(?:/|$)",
+      "^/(?:billing-and-invoicing|azure-cost-management-and-billing|reporting-and-analytics|self-service-marketplace|subscription-license-management|pricing-margins-monetization)/?$"
+    ]
+  },
+  "spektrasystems.com": {
+    "money": ["^/(?:isv|system-integrators|microsoft-csp-partner|saasify|solutions|success-stories)/?$"]
+  }
+}
