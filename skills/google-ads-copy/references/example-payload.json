@@ -1,0 +1,212 @@
+{
+  "meta": {
+    "product_skill": "cloudlabs-isv",
+    "segment": "ISV",
+    "date": "2026-11-05",
+    "note": "Worked example. Sitelink URLs are placeholders: a real run uses URLs fetched from the live site."
+  },
+  "defaults": {
+    "status": "Draft",
+    "owner": ""
+  },
+  "competitors": [
+    "CloudShare",
+    "Instruqt",
+    "Skillable",
+    "Qwiklabs",
+    "Skills Boost",
+    "Apporto"
+  ],
+  "customers": [
+    "Check Point",
+    "Wiz",
+    "Sophos",
+    "Databricks",
+    "JFrog",
+    "CLICO",
+    "Microsoft"
+  ],
+  "blocked_claims": [
+    "80\\s?%",
+    "6\\s?-\\s?10\\s+hours",
+    "2\\s?-\\s?3\\s?x"
+  ],
+  "hedged_claims": [
+    "under (60|a) (seconds?|minute)|60[- ]second"
+  ],
+  "acronyms": [],
+  "keywords": [
+    {
+      "keyword": "cloudshare alternative",
+      "match_type": "Phrase",
+      "intent": "Commercial",
+      "campaign": "Search | ISV | Competitor Alternatives",
+      "ad_group": "cloudshare alternative",
+      "landing_page": "https://cloudlabs.ai/cloudshare-alternative",
+      "priority": "High",
+      "notes": "Switching and migration angle. Renewal timing is the trigger."
+    },
+    {
+      "keyword": "cloudshare alternatives",
+      "match_type": "Phrase",
+      "intent": "Commercial",
+      "campaign": "Search | ISV | Competitor Alternatives",
+      "ad_group": "cloudshare alternative",
+      "landing_page": "https://cloudlabs.ai/cloudshare-alternative",
+      "priority": "High",
+      "notes": "Plural variant; covered by the same headlines."
+    },
+    {
+      "keyword": "cloudshare pricing",
+      "match_type": "Phrase",
+      "intent": "Commercial",
+      "campaign": "Search | ISV | Competitor Alternatives",
+      "ad_group": "cloudshare alternative",
+      "landing_page": "https://cloudlabs.ai/cloudshare-alternative",
+      "priority": "Medium",
+      "notes": "Cost comparison angle; do not quote an unsourced saving."
+    },
+    {
+      "keyword": "virtual lab software",
+      "match_type": "Phrase",
+      "intent": "Commercial",
+      "campaign": "Search | ISV | Hands-on Labs",
+      "ad_group": "virtual lab software",
+      "landing_page": "https://cloudlabs.ai/",
+      "priority": "High",
+      "notes": "Category term. Generic copy, no competitor names."
+    }
+  ],
+  "ads": [
+    {
+      "campaign": "Search | ISV | Competitor Alternatives",
+      "ad_group": "cloudshare alternative",
+      "competes_with": [
+        "CloudShare"
+      ],
+      "final_url": "https://cloudlabs.ai/cloudshare-alternative",
+      "path1": "Compare",
+      "path2": "CloudShare",
+      "headlines": [
+        "CloudShare Alternatives",
+        "Lab Platform Built for ISVs",
+        "Switching Lab Vendors?",
+        "Migration Help Included",
+        "Managed Labs, 24/7 Support",
+        "One Vendor, Every Cloud",
+        "Azure, AWS, GCP & Oracle",
+        "Compare Lab Costs",
+        "Launch POCs at Scale",
+        "Your SaaS Inside the Lab",
+        "Used by Check Point & Wiz",
+        "SOC 2 Type II + ISO 27001",
+        "Book a 30-Minute Demo",
+        "Labs Tear Down on Schedule",
+        "Build Labs With AI"
+      ],
+      "descriptions": [
+        "See how CloudLabs compares with CloudShare before your renewal. Book a 30-minute demo.",
+        "We migrate your existing labs. One vendor, one contract, every cloud your teams use.",
+        "Run your own SaaS next to real Azure, AWS, GCP and Oracle infrastructure in one lab.",
+        "Environments tear down on schedule, so nothing runs by mistake. Managed 24/7 by our team."
+      ],
+      "hypothesis": "No pins. Test the switching angle (H3, H4, D2) against the cost angle (H8, H14, D4). Read asset performance labels after 30 days.",
+      "notes": "Competitor name in H1, D1 and the display path: trademark complaint risk, keep claims factual. H1 is the plural so it also contains 'cloudshare alternative', which the template's In a headline? check needs. Confirm the landing page states migration help, 24/7 support and both certifications before launch. Customer names in H11 need marketing sign-off."
+    },
+    {
+      "campaign": "Search | ISV | Hands-on Labs",
+      "ad_group": "virtual lab software",
+      "final_url": "https://cloudlabs.ai/",
+      "path1": "Virtual-Labs",
+      "path2": "Multi-Cloud",
+      "headlines": [
+        "Virtual Lab Software",
+        "Managed Labs",
+        "Let Prospects Use Your Product",
+        "Real Azure, AWS, GCP, Oracle",
+        "Stop Hand-Building POC Labs",
+        "Your SaaS Wired Into Each Lab",
+        "Run Demos, POCs and Trials",
+        "Embed Live Demos",
+        "Lab Usage Data Feeds Your CRM",
+        "Book a Demo"
+      ],
+      "descriptions": [
+        "Managed virtual labs on real cloud infrastructure, with your own SaaS built into each one.",
+        "Free your solutions engineers from rebuilding demo environments. We run them for you.",
+        "Embed hands-on demos on your site and send trial engagement straight to your CRM."
+      ],
+      "hypothesis": "No pins. Test pain-led H5 against category-led H1 in position 1.",
+      "notes": "Ten headlines only; add more once the landing page copy is confirmed."
+    }
+  ],
+  "sitelinks": [
+    {
+      "campaign": "Search | ISV | Competitor Alternatives",
+      "text": "Compare Lab Platforms",
+      "desc1": "Features, cloud support, cost",
+      "desc2": "See the side-by-side view",
+      "final_url": "https://www.example.com/compare",
+      "notes": "Placeholder URL"
+    },
+    {
+      "campaign": "Search | ISV | Competitor Alternatives",
+      "text": "Migration Support",
+      "desc1": "We move your existing labs",
+      "desc2": "Plan it with our team",
+      "final_url": "https://www.example.com/migration",
+      "notes": "Placeholder URL"
+    },
+    {
+      "campaign": "Search | ISV | Competitor Alternatives",
+      "text": "Book a 30-Minute Demo",
+      "desc1": "See the platform live",
+      "desc2": "Bring your own use case",
+      "final_url": "https://www.example.com/demo",
+      "notes": "Placeholder URL"
+    },
+    {
+      "campaign": "Search | ISV | Competitor Alternatives",
+      "text": "Customer Stories",
+      "desc1": "Security and data vendors",
+      "desc2": "How they run hands-on labs",
+      "final_url": "https://www.example.com/customers",
+      "notes": "Placeholder URL"
+    }
+  ],
+  "callouts": [
+    {
+      "campaign": "Search | ISV | Competitor Alternatives",
+      "text": "Managed 24/7 Support"
+    },
+    {
+      "campaign": "Search | ISV | Competitor Alternatives",
+      "text": "Azure, AWS, GCP, Oracle"
+    },
+    {
+      "campaign": "Search | ISV | Competitor Alternatives",
+      "text": "Migration Help"
+    },
+    {
+      "campaign": "Search | ISV | Competitor Alternatives",
+      "text": "SOC 2 Type II"
+    },
+    {
+      "campaign": "Search | ISV | Competitor Alternatives",
+      "text": "White-Label Portal"
+    }
+  ],
+  "snippets": [
+    {
+      "campaign": "Search | ISV | Competitor Alternatives",
+      "header": "Service catalog",
+      "values": [
+        "Hands-On Labs",
+        "POC Environments",
+        "Product Trials",
+        "Partner Enablement",
+        "Event Labs"
+      ]
+    }
+  ]
+}

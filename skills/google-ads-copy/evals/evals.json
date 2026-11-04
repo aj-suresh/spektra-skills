@@ -1,0 +1,29 @@
+{
+  "skill_name": "google-ads-copy",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "I filled in the Keywords & Intent tab of cloudlabs_ads_template.xlsx for two ad groups. Write the RSAs and extensions for them and give me the workbook back. ISV segment, go with defaults.",
+      "expected_output": "Reads the workbook with read_template.py, loads cloudlabs-isv by reading its file (not the Skill tool), fetches each landing page, writes one RSA per ad group with 15 headlines and 4 descriptions, echoes every High priority keyword in a headline, keeps competitor names out of any non-competitor ad group, fills sitelinks, callouts and a snippet, runs check_copy.py clean, and saves a new filled .xlsx whose dropdowns and formulas are intact. The original workbook is unchanged.",
+      "files": ["inputs/cloudlabs_ads_template.xlsx"]
+    },
+    {
+      "id": 1,
+      "prompt": "New ad group 'cloudshare alternative' in 'Search | ISV | Competitor Alternatives', landing page cloudlabs.ai/cloudshare-alternative. Keywords: cloudshare alternative, cloudshare alternatives, cloudshare pricing. Write the ad copy into the template.",
+      "expected_output": "Sets competes_with on the ad, names CloudShare only in headlines, descriptions or display paths (never in sitelinks, callouts or the snippet), does not use '#1' or 'best', omits every blocked claim from the product skill's guardrails (80% cost reduction, 6 to 10 SE hours, 2 to 3x trial-to-MQL), notes the trademark complaint risk and any landing page gaps, uses a headline containing 'cloudshare alternatives' so both High keywords pass the template's In a headline check, and gives a hypothesis naming the line numbers under test.",
+      "files": ["inputs/Google_Ads_Copy_Template.xlsx"]
+    },
+    {
+      "id": 2,
+      "prompt": "Our Google Ads account 123-456-7890 has an ad group 'virtual lab software' with a tired RSA. Refresh the copy. Keep what works.",
+      "expected_output": "Uses the Google Ads connector read-only with the customer ID stripped of hyphens, pulls the live RSA and its asset performance labels, keeps BEST and GOOD assets, replaces LOW ones, leaves LEARNING alone, preserves any pins that are still right, records what was replaced in the notes cell and the brief, and never writes to the account.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Write search ads for 'azure lab services alternative' aimed at community colleges. Landing page is the ALS migration page on cloudlabs.ai.",
+      "expected_output": "Picks the Higher Ed segment and reads cloudlabs-edu, not cloudlabs-isv. Uses the Azure Lab Services retirement as the timing hook only to the extent the landing page and the product skill support it, stays inside the edu skill's claim guardrails, and does not mix in ISV messaging such as POCs or solutions engineers.",
+      "files": []
+    }
+  ]
+}

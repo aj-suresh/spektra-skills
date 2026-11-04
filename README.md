@@ -7,8 +7,9 @@ Claude Code skills that are only relevant to CloudLabs.ai or Spektra Systems, ke
 - `skills/cloudlabs-isv` — CloudLabs GTM context for the ISV (software / SaaS vendor) segment. Invoke with `/cloudlabs-isv`.
 - `skills/cloudlabs-edu` — CloudLabs GTM context for the Higher Education segment. Invoke with `/cloudlabs-edu`.
 - `skills/internal-linking` — Adds internal links to a blog draft (Word or Google Doc). It crawls the sitemaps of cloudlabs.ai, saasify.ai, cspcontrolcenter.com and spektrasystems.com, checks Search Console, inserts links into a copy of the draft, and lists existing pages that should link back. It runs automatically when you ask for internal links, or you can type `/internal-linking`.
+- `skills/google-ads-copy` — Writes Google Ads Search copy for an ad group: a responsive search ad (15 headlines, 4 descriptions), sitelinks, callouts and structured snippets. It reads the ISV or Higher Ed context from the two skills above, then the keywords, the live landing page and competitor context, checks the copy, and fills the bundled Google Ads Copy Template. It runs automatically when you ask for Google Ads copy, or you can type `/google-ads-copy`.
 
-The two cloudlabs skills are manual-invoke only (`disable-model-invocation: true`). Claude never loads them on its own, only when you type the slash command.
+The two cloudlabs skills are manual-invoke only (`disable-model-invocation: true`). Claude never loads them on its own, only when you type the slash command. `google-ads-copy` reads their files by path, so it works with them without you typing either command.
 
 ### internal-linking: team notes
 
@@ -17,6 +18,13 @@ The two cloudlabs skills are manual-invoke only (`disable-model-invocation: true
 - **Search Console:** used when the Google Search Console connector is enabled in Claude. Without it the skill still works and says so in its report.
 - **Google Docs:** download the doc as .docx (File → Download → Microsoft Word), run the skill on it, then upload the `– linked.docx` copy back to Drive. Links survive the conversion.
 - A generic version (no Spektra config) is public at [aj-suresh/aeo-content-skills](https://github.com/aj-suresh/aeo-content-skills).
+
+### google-ads-copy: team notes
+
+- **Product context:** `skills/google-ads-copy/config/product-context.md` maps the ISV and Higher Ed segments to `cloudlabs-isv` and `cloudlabs-edu`. Edit and push it to change which skill covers which ad groups.
+- **Template:** a blank `Google_Ads_Copy_Template.xlsx` is in `skills/google-ads-copy/assets/`. The skill fills a copy and never overwrites yours.
+- **Needs:** Python 3.9 or newer, no packages. The Google Ads connector is optional and read-only.
+- A generic version (no CloudLabs config) is public at [aj-suresh/google-ads-copy-skill](https://github.com/aj-suresh/google-ads-copy-skill).
 
 ## Install via plugin marketplace (recommended for the team)
 
@@ -27,7 +35,7 @@ claude plugin marketplace add aj-suresh/spektra-skills
 claude plugin install spektra@spektra-skills
 ```
 
-Restart Claude Code (or the desktop app) afterwards. Skills are namespaced by plugin, so the manual ones are `/spektra:cloudlabs-isv` and `/spektra:cloudlabs-edu`. `internal-linking` triggers on its own when you ask for internal links.
+Restart Claude Code (or the desktop app) afterwards. Skills are namespaced by plugin, so the manual ones are `/spektra:cloudlabs-isv` and `/spektra:cloudlabs-edu`. `internal-linking` and `google-ads-copy` trigger on their own when you ask for internal links or Google Ads copy.
 
 **Updating:** `claude plugin marketplace update spektra-skills`, then `claude plugin update spektra@spektra-skills`. Updates only arrive when the `version` in `.claude-plugin/plugin.json` changes, so bump it with every push.
 
@@ -44,6 +52,7 @@ mkdir -p ~/.claude/skills
 ln -s ~/spektra-skills/skills/cloudlabs-isv ~/.claude/skills/cloudlabs-isv
 ln -s ~/spektra-skills/skills/cloudlabs-edu ~/.claude/skills/cloudlabs-edu
 ln -s ~/spektra-skills/skills/internal-linking ~/.claude/skills/internal-linking
+ln -s ~/spektra-skills/skills/google-ads-copy ~/.claude/skills/google-ads-copy
 ```
 
 **Windows (PowerShell, run as the user — no admin needed for a directory symlink you own):**
@@ -52,6 +61,7 @@ git clone https://github.com/aj-suresh/spektra-skills.git $HOME\spektra-skills
 New-Item -ItemType Junction -Path "$HOME\.claude\skills\cloudlabs-isv" -Target "$HOME\spektra-skills\skills\cloudlabs-isv"
 New-Item -ItemType Junction -Path "$HOME\.claude\skills\cloudlabs-edu" -Target "$HOME\spektra-skills\skills\cloudlabs-edu"
 New-Item -ItemType Junction -Path "$HOME\.claude\skills\internal-linking" -Target "$HOME\spektra-skills\skills\internal-linking"
+New-Item -ItemType Junction -Path "$HOME\.claude\skills\google-ads-copy" -Target "$HOME\spektra-skills\skills\google-ads-copy"
 ```
 
 If you'd rather not symlink, a plain copy of `skills/<name>` into `~/.claude/skills/<name>` also works — you'll just need to re-copy after future edits.
